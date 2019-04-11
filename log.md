@@ -190,6 +190,7 @@ substrate-ui-new substrate
 - https://rustwasm.github.io/docs/book/
 - https://blog.openbloc.fr/webassembly-first-steps/
 - https://github.com/mchaver/rust-wasm-hello-world
+- [Edcon notes](https://notes.status.im/Jtkyg84pSGG5s1GgTSioBQ?both#Background)
 
 ## Tools
 
@@ -232,6 +233,7 @@ Either as runtime or to host contracts/logic
 
 - Ethereum: https://github.com/ewasm, 
 - [parity-ethereum](https://github.com/paritytech/parity-ethereum), [parity-bitcoin](https://github.com/paritytech/parity-bitcoin) (planned?)
+- https://www.parity.io/wasm-smart-contract-development/
 - substrate based ([polkadot](https://github.com/paritytech/polkadot), [shasper](https://github.com/paritytech/shasper), [parity-zcash](https://github.com/paritytech/parity-zcash), https://edgewa.re/)
 - [DFinity](https://medium.com/dfinity/why-webassembly-f21967076e4)
 - [Cardano](https://github.com/input-output-hk/rust-cardano)
@@ -244,6 +246,8 @@ Either as runtime or to host contracts/logic
 - [TrueBit](https://truebit.io/)
 - [EWasm](https://github.com/ewasm)
 - [Golem](https://docs.golem.network/#/About/Use-Cases?id=wasm)
+- [IPFS](https://github.com/ipfs/go-ipfs/issues/5694)
+- [zkSnark Proofs](https://github.com/iden3/websnark)
 
 ## Future features
 
@@ -287,3 +291,4 @@ Either as runtime or to host contracts/logic
 - https://hub.docker.com/r/fastly/lucet
 - https://www.fastly.com/blog/announcing-lucet-fastly-native-webassembly-compiler-runtime
 - wasi.dev
+- https://twitter.com/solomonstre/status/1111004913222324225
