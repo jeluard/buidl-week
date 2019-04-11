@@ -1,0 +1,63 @@
+{meta {:name          "Wasm"
+       :description   ""
+       :documentation ""}
+
+ events/logger
+ (let [{value :value} properties]
+   [log {:value value}]) 
+ 
+ events/wasm-success
+ (let [{value :value} properties]
+   [log {:value "WASM inspect: ${value}"}]
+   [store/put {:key "MODULE" :value value}])
+ 
+ events/wasm-invoke-success
+ (let [{value :value} properties]
+   [store/put {:key "RESULT" :value value}])
+ 
+ events/ipfs-success
+ (let [{value :value} properties]
+   [log {:value "Success ${value}"}]
+   [wasm/inspect {:value value :on-success [wasm-success]}])
+
+ events/ipfs-invoke-success
+ (let [{value :value function :function} properties]
+   [wasm/call {:function function :value value :on-success [wasm-invoke-success]}])
+ 
+ events/ipfs-failure
+ (let [{value :value} properties]
+   [log {:value "Failure ${value}"}])
+
+ events/store-hash
+ (let [{value :value} properties]
+   [store/put {:key "HASH" :value value}])
+ 
+ events/store-function
+ (let [{value :value} properties]
+   [store/put {:key "FUNCTION" :value value}]) 
+ 
+ views/list-item-view
+ (let [{name :name kind :kind} properties]
+   [view "${name} : ${kind}"]) 
+ 
+ views/wasm-view
+ (let [hash [store/get {:key "HASH"}]
+       function [store/get {:key "FUNCTION"}]
+       result [store/get {:key "RESULT"}]
+       {exports :exports imports :imports} [store/get {:key "MODULE"}]]
+   [view
+    [input {:style {:margin 10} :placeholder "IPFS hash" :on-change [store-hash]}]
+    [button {:on-click [ipfs/cat {:hash       hash
+                                  :on-success [ipfs-success]
+                                  :on-failure [ipfs-failure]}]}
+     "Inspect"]
+    [list {:style {:height 50} :data exports :item-view [list-item-view]}]
+    [input {:style {:margin 10} :placeholder "Wasm function" :on-change [store-function]}]
+    [button {:on-click [ipfs/cat {:hash       hash
+                                  :on-success [ipfs-invoke-success {:function function}]}]}
+     "Invoke"]
+    [text "Result: ${result}"]])
+    
+ hooks/wallet.settings.wasm
+ {:label "Wasm"
+  :view  [wasm-view]}}
