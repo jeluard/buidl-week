@@ -259,7 +259,7 @@ Either as runtime or to host contracts/logic
 - [C/C++](https://emscripten.org/)
 - [Typescript..ish](https://github.com/AssemblyScript/assemblyscript)
 - [Go](https://github.com/golang/go/wiki/WebAssembly) and [TinyGo](https://github.com/Joystream/tinygo-wasm-substrate)
-- [Nim](https://github.com/Feneric/nim-wasm-helpers) (?)
+- [Nim](https://github.com/Feneric/nim-wasm-helpers) and [Jacek](https://forum.nim-lang.org/t/4779)
 - [Haskell](https://github.com/tweag/asterius) [alternative](https://github.com/dfinity/dhc)
 - [Java](https://github.com/i-net-software/JWebAssembly) [alternative #1](https://github.com/mirkosertic/Bytecoder) [alternative #2](http://teavm.org/) (bytecode level)
 - [Kotlin](https://github.com/JetBrains/kotlin-native/) (via LLVM)
@@ -291,4 +291,5 @@ Either as runtime or to host contracts/logic
 - https://hub.docker.com/r/fastly/lucet
 - https://www.fastly.com/blog/announcing-lucet-fastly-native-webassembly-compiler-runtime
 - wasi.dev
+- https://wasi.dev/polyfill/
 - https://twitter.com/solomonstre/status/1111004913222324225
