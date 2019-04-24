@@ -17,4 +17,4 @@ Team Member: Julien
 
 ## DEMO
 
-[![Demo](https://img.youtube.com/vi/VID/TOfmJmiFCx8.jpg)](https://www.youtube.com/watch?v=TOfmJmiFCx8 "Demo")
+[![Demo](https://img.youtube.com/vi/TOfmJmiFCx8/0.jpg)](https://www.youtube.com/watch?v=TOfmJmiFCx8 "Demo")
