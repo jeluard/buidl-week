@@ -1,8 +1,11 @@
 # Status BUIDL week
 
-i[Repository](https://github.com/jeluard/buidl-week)
+[Repository](https://github.com/jeluard/buidl-week)
+
 [Pitch](https://github.com/jeluard/buidl-week/blob/master/pitch.md)
+
 [Presentation](https://github.com/jeluard/buidl-week/blob/master/presentation.md)
+
 [Log](https://github.com/jeluard/buidl-week/blob/master/log.md)
 
 Team Member: Julien
@@ -14,4 +17,4 @@ Team Member: Julien
 
 ## DEMO
 
-[![Alt text](https://img.youtube.com/vi/VID/TOfmJmiFCx8.jpg)](https://www.youtube.com/watch?v=TOfmJmiFCx8)
+[![Demo](https://img.youtube.com/vi/VID/TOfmJmiFCx8.jpg)](https://www.youtube.com/watch?v=TOfmJmiFCx8 "Demo")
